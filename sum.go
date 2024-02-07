@@ -1,7 +1,9 @@
 package mymodule
 
-import "fmt"
-
-func Sum(a, b int) {
-	fmt.Println(a + b)
+func Sum(a ...int) int {
+	var res = 0
+	for _, num := range a {
+		res += num
+	}
+	return res
 }
